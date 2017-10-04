@@ -7,21 +7,21 @@ func sample() (string, bool) {
 func TestTupleAssignment(t *T) {
 	result, errcode := sample()
 
-	t.AssertTrue(String__ == result)
-	t.AssertTrue(Boolean__ == errcode)
+	t.AssertTrue("hello" == result)
+	t.AssertTrue(true == errcode)
 }
 
 func TestTupleAssignmentBlankIdentifier(t *T) {
 	result, _ := sample()
 
-	t.AssertTrue(String__ == result)
+	t.AssertTrue("hello" == result)
 }
 
 func TestSwapWithTuples(t *T) {
 	a := 1
 	b := 2
 	a, b = b, a
-	t.AssertTrue(Int__ == a)
-	t.AssertTrue(Int__ == b)
+	t.AssertTrue(2 == a)
+	t.AssertTrue(1 == b)
 
 }

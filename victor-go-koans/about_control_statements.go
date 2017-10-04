@@ -10,7 +10,7 @@ func TestIfThenElseStatements(t *T) {
 		result = "false value"
 	}
 
-	t.AssertTrue(String__ == result)
+	t.AssertTrue("true value" == result)
 }
 
 func TestIfThenStatement(t *T) {
@@ -18,7 +18,7 @@ func TestIfThenStatement(t *T) {
 	if true {
 		result = "true value"
 	}
-	t.AssertTrue(String__ == result)
+	t.AssertTrue("true value" == result)
 }
 
 func TestWhileStatement(t *T) {
@@ -28,7 +28,7 @@ func TestWhileStatement(t *T) {
 		result = result * i
 		i += 1
 	}
-	t.AssertEqualInt(Int__, result)
+	t.AssertEqualInt(3628800, result)
 }
 
 func TestBreakStatement(t *T) {
@@ -41,7 +41,7 @@ func TestBreakStatement(t *T) {
 		result = result * i
 		i += 1
 	}
-	t.AssertEqualInt(Int__, result)
+	t.AssertEqualInt(3628800, result)
 }
 
 func TestContinueStatement(t *T) {
@@ -54,7 +54,7 @@ func TestContinueStatement(t *T) {
 		}
 		result = append(result, fmt.Sprintf("%d", i))
 	}
-	t.AssertEqualsStringSlices(StringSlice__, result)
+	t.AssertEqualsStringSlices([]string{"1", "3", "5", "7", "9"}, result)
 }
 
 func TestForStatement(t *T) {
@@ -62,7 +62,7 @@ func TestForStatement(t *T) {
 	for i := 1; i <= 10; i++ {
 		result = result * i
 	}
-	t.AssertEqualInt(Int__, result)
+	t.AssertEqualInt(3628800, result)
 }
 
 func TestForEachStatement(t *T) {
@@ -71,5 +71,5 @@ func TestForEachStatement(t *T) {
 	for _, value := range list {
 		result += value
 	}
-	t.AssertEqualInt(Int__, result)
+	t.AssertEqualInt(10, result)
 }

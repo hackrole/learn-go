@@ -1,4 +1,4 @@
 #!/bin/sh -e
 
 go build
-./go_koans
+./victor-go-koans
