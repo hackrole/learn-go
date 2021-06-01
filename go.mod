@@ -1,3 +1,3 @@
-module github.com/hackrole/learn-golang
+module github.com/hackrole/learn-go
 
 go 1.16
